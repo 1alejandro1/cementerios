@@ -27,6 +27,7 @@ class PDFKardex extends FPDF
             $this->Cell(85);
             $this->Cell(30,7,utf8_decode($regglobal->linea5),0,1,'C');
             $this->SetFont('Arial','B',14);
+            
             $this->Cell(85);
             $this->Cell(30,7,utf8_decode($regglobal->linea6),0,0,'C');
             // Salto de línea
@@ -83,7 +84,8 @@ class PDFKardex extends FPDF
             $this->Cell($fila['len4'],7, utf8_decode($fila['encabezado4']),1, 0 , 'C', true );
             $this->Cell($fila['len5'],7, utf8_decode($fila['encabezado5']),1, 0 , 'C', true );
             $this->Cell($fila['len6'],7, utf8_decode($fila['encabezado6']),1, 0 , 'C', true );
-            $this->Cell($fila['len7'],7, utf8_decode($fila['encabezado7']),1, 1 , 'C', true );
+            $this->Cell($fila['len7'],7, utf8_decode($fila['encabezado7']),1, 0 , 'C', true );
+            $this->Cell($fila['len8'],7, utf8_decode($fila['encabezado8']),1, 1 , 'C', true );
 
             $this->Cell($fila['len1'],7, utf8_decode($fila['encabezado21']),'LRB', 0 , 'C', true );
             $this->Cell($fila['len2'],7, utf8_decode($fila['encabezado22']),'LRB', 0 , 'C', true );
@@ -92,6 +94,7 @@ class PDFKardex extends FPDF
             $this->Cell($fila['len5'],7, utf8_decode($fila['encabezado25']),'LRB', 0 , 'C', true );
             $this->Cell($fila['len6'],7, utf8_decode($fila['encabezado26']),'LRB', 0 , 'C', true );
             $this->Cell($fila['len7'],7, utf8_decode($fila['encabezado27']),'LRB', 0 , 'C', true );
+            $this->Cell($fila['len8'],7, utf8_decode($fila['encabezado28']),'LRB', 0 , 'C', true );
         }
     }
     
@@ -113,6 +116,17 @@ class PDFKardex extends FPDF
             } else {
                 $observacion = trim($fila['observacion']);
             }
+            if ($fila['tipopago']=="E") {
+                $tipopago = 'EFECTIVO';
+            }else{
+                if ($fila['tipopago']=="B") {
+                    $tipopago = 'BANCO';
+                }else{
+                    if ($fila['tipopago']=="C") {
+                        $tipopago = 'CHEQUE';
+                    }
+                }  
+            }
 
             $this->Cell($fila['len1'],7, utf8_decode($fila['fechacobranza']),1, 0 , 'C', $bandera );
             $this->Cell($fila['len2'],7, utf8_decode($fila['nrorecibo']),1, 0 , 'C', $bandera );
@@ -120,7 +134,8 @@ class PDFKardex extends FPDF
             $this->Cell($fila['len4'],7, utf8_decode($fila['monto']),1, 0 , 'C', $bandera );
             $this->Cell($fila['len5'],7, utf8_decode(strtoupper($concepto)),1, 0 , 'C', $bandera );
             $this->Cell($fila['len6'],7, utf8_decode($fila['saldo']),1, 0 , 'C', $bandera );
-            $this->Cell($fila['len7'],7, utf8_decode(strtoupper($observacion)),1, 0 , 'C', $bandera );
+            $this->Cell($fila['len7'],7, utf8_decode(strtoupper($tipopago)),1, 0 , 'C', $bandera );
+            $this->Cell($fila['len8'],7, utf8_decode(strtoupper($observacion)),1, 0 , 'C', $bandera );
         }
 //        $this->Ln();
     }

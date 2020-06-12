@@ -291,7 +291,7 @@
 			global $conexion;
 
 			$sqldatocontrato = "select * 
-								from vcontrato c 
+								from contrato c 
 								where idcontrato = $idcontrato";
 
 			$querydatocontrato = $conexion->query($sqldatocontrato);
@@ -331,7 +331,7 @@
 						$pdf->Cell(35,7,utf8_decode('FECHA DE PAGO: '),'B',0);
 						$pdf->Cell(0,7,utf8_decode($reg->fechapago),'B',1,'L',true);
 
-					$sql3 = "SELECT cobranza.idcobranza, cobranza.idcontrato, cobranza.fechacobranza, cobranza.nrorecibo, cobranzadetalle.nrocuota, cobranzadetalle.monto, cobranza.concepto, cobranza.observaciones, cobranza.nombre
+					$sql3 = "SELECT cobranza.idcobranza, cobranza.idcontrato, cobranza.fechacobranza, cobranza.nrorecibo, cobranzadetalle.nrocuota, cobranzadetalle.monto, cobranza.concepto, cobranza.tipopago, cobranza.observaciones, cobranza.nombre
 					           FROM cobranza
 					           INNER JOIN cobranzadetalle ON cobranza.idcobranza = cobranzadetalle.idcobranza 
 					           WHERE cobranza.idcontrato = $idcontrato;";
@@ -340,7 +340,7 @@
 
 					//Títulos que llevará la cabecera
 					$miCabecera = array(
-									array('encabezado1'=>'', 'encabezado2'=>'NRO', 'encabezado3'=>'NRO', 'encabezado4'=>'TOTAL', 'encabezado5'=>'OBJETO DEL', 'encabezado6'=>'SALDO', 'encabezado7'=>'', 'encabezado21'=>'FECHA', 'encabezado22'=>'RECIBO', 'encabezado23'=>'CUOTA', 'encabezado24'=>'PAGO', 'encabezado25'=>'PAGO', 'encabezado26'=>'USD', 'encabezado27'=>'OBSERVACIONES', 'len1' => 20, 'len2' => 20, 'len3' => 15, 'len4' => 25, 'len5' => 30, 'len6' => 25, 'len7' => 60)
+									array('encabezado1'=>'', 'encabezado2'=>'NRO', 'encabezado3'=>'NRO', 'encabezado4'=>'TOTAL', 'encabezado5'=>'OBJETO DEL', 'encabezado6'=>'SALDO','encabezado7'=>'TIPO DE', 'encabezado8'=>'', 'encabezado21'=>'FECHA', 'encabezado22'=>'RECIBO', 'encabezado23'=>'CUOTA', 'encabezado24'=>'PAGO', 'encabezado25'=>'PAGO', 'encabezado26'=>'USD','encabezado27'=>'PAGO', 'encabezado28'=>'OBSERVACIONES', 'len1' => 20, 'len2' => 20, 'len3' => 15, 'len4' => 20, 'len5' => 30,'len6' => 20, 'len7' => 23, 'len8' => 43)
 								);
 					 
 					//Métodos llamados con el objeto $pdf
@@ -356,7 +356,7 @@
 		     		while ($reg3 = $query3->fetch_object()) {
 		     			$saldo = $saldo - $reg3->monto;
 		     			$totalpagado = $totalpagado + $reg3->monto;
-		     			$misDatos = array(array('fechacobranza' => $reg3->fechacobranza,'nrorecibo' => $reg3->nrorecibo, 'nrocuota' => $reg3->nrocuota, 'monto' => $reg3->monto, 'concepto' => $reg3->concepto, 'saldo' => number_format($saldo,2), 'observacion' => $reg3->observaciones, 'len1' => 20, 'len2' => 20, 'len3' => 15, 'len4' => 25, 'len5' => 30, 'len6' => 25, 'len7' => 60) );
+		     			$misDatos = array(array('fechacobranza' => $reg3->fechacobranza,'nrorecibo' => $reg3->nrorecibo, 'nrocuota' => $reg3->nrocuota, 'monto' => $reg3->monto, 'concepto' => $reg3->concepto, 'saldo' => number_format($saldo,2), 'tipopago' => $reg3->tipopago, 'observacion' => $reg3->observaciones, 'len1' => 20, 'len2' => 20, 'len3' => 15, 'len4' => 20, 'len5' => 30, 'len6' => 20,'len7' => 23, 'len8' => 43) );
 						$pdf->datosHorizontal($misDatos,$x,$bandera);
 						$x = $x + 7;
 						$bandera = !$bandera;
