@@ -115,11 +115,13 @@
 
 					"3"=>$reg->numdocumento,
 
-					"4"=>$reg->email,
+					"4"=>$reg->difunto,
 
-					"5"=>$reg->telefono,
+					"5"=>$reg->email,
 
-					"6"=>'<button class="btn btn-warning" data-toggle="tooltip" title="Editar" onclick="cargarDataResponsable('.$reg->idresponsable.',\''.$reg->apellidos.'\',\''.$reg->nombre.'\',\''.$reg->tipodocumento.'\',\''.$reg->numdocumento.'\',\''.$reg->direccion.'\',\''.$reg->telefono.'\',\''.$reg->celular.'\',\''.$reg->email.'\',\''.$reg->estado.'\',\''.$reg->iddifunto.'\',\''.$reg->difunto.'\')"><i class="fa fa-pencil"></i> </button>&nbsp;'.
+					"6"=>$reg->telefono,
+
+					"7"=>'<button class="btn btn-warning" data-toggle="tooltip" title="Editar" onclick="cargarDataResponsable('.$reg->idresponsable.',\''.$reg->apellidos.'\',\''.$reg->nombre.'\',\''.$reg->tipodocumento.'\',\''.$reg->numdocumento.'\',\''.$reg->direccion.'\',\''.$reg->telefono.'\',\''.$reg->celular.'\',\''.$reg->email.'\',\''.$reg->estado.'\',\''.$reg->iddifunto.'\',\''.$reg->difunto.'\')"><i class="fa fa-pencil"></i> </button>&nbsp;'.
 
 					'<button class="btn btn-danger" data-toggle="tooltip" title="Eliminar" onclick="eliminarResponsable('.$reg->idresponsable.')"><i class="fa fa-trash"></i> </button>');
 

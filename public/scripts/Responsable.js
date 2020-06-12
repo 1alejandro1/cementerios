@@ -216,7 +216,9 @@ function ListadoResponsable(){
 
                     {   "mDataProp": "5"},
 
-                    {   "mDataProp": "6"}
+					{   "mDataProp": "6"},
+					
+					{   "mDataProp": "7"}
 
         	],"ajax":
 
