@@ -301,7 +301,7 @@ function certificadoObito(id,nrocontrato){
 }
 
 
-function cargarDataInhumacion(id, codigo, idcontrato,iddifunto,fechafallecimiento,fechainhumacion,fecharegistro,idpersonal,observaciones,nrocontrato,fechacontrato,difunto,personal,cementerio,sector,lote,fila,columna) {
+function cargarDataInhumacion(id, codigo, nivel, idcontrato,iddifunto,fechafallecimiento,fechainhumacion,fecharegistro,idpersonal,observaciones,nrocontrato,fechacontrato,difunto,personal,cementerio,sector,lote,fila,columna) {
 
 		$("#VerForm").show();// mostramos el formulario
 
@@ -340,7 +340,9 @@ function cargarDataInhumacion(id, codigo, idcontrato,iddifunto,fechafallecimient
 
 		$("#txtFechaRegistro").val(fecharegistro);
 
-	    $("#txtIdPersonal").val(idpersonal);
+		$("#txtIdPersonal").val(idpersonal);
+		
+		$("#txtNivel").val(nivel);
 
 		$("#txtPersonal").val(personal);
 

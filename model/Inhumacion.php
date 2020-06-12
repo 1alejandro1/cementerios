@@ -10,16 +10,16 @@
 
 		}
 
-		public function Registrar($idcontrato,$iddifunto,$fechafallecimiento,$fechainhumacion,$idpersonal,$observaciones , $codigo){
+		public function Registrar($idcontrato,$iddifunto,$fechafallecimiento,$fechainhumacion,$idpersonal ,$nivel,$observaciones , $codigo){
 
 			global $conexion;
 
             $fecharegistro   = new DateTime();
             $fecharegistro = date_format($fecharegistro,"Y/m/d");
 
-			$sql = "INSERT INTO inhumacion (idcontrato,iddifunto,fechafallecimiento,fechainhumacion,idpersonal,observaciones,fecharegistro, codigo)
+			$sql = "INSERT INTO inhumacion (idcontrato,iddifunto,fechafallecimiento,fechainhumacion,idpersonal, nivel, observaciones,fecharegistro, codigo)
 
-						VALUES($idcontrato,$iddifunto,'$fechafallecimiento','$fechainhumacion',$idpersonal,'$observaciones','$fecharegistro', '$codigo')";
+						VALUES($idcontrato,$iddifunto,'$fechafallecimiento','$fechainhumacion',$idpersonal, '$nivel','$observaciones','$fecharegistro', '$codigo')";
 
 			$query = $conexion->query($sql);
 
@@ -29,11 +29,11 @@
 
 
 
-		public function Modificar($idinhumacion,$idcontrato,$iddifunto,$fechafallecimiento,$fechainhumacion,$idpersonal,$observaciones, $codigo){
+		public function Modificar($idinhumacion,$idcontrato,$iddifunto,$fechafallecimiento,$fechainhumacion,$idpersonal,$nivel,$observaciones, $codigo){
 
 			global $conexion;
 
-			$sql = "UPDATE inhumacion set idcontrato=$idcontrato, iddifunto=$iddifunto, fechafallecimiento='$fechafallecimiento', fechainhumacion='$fechainhumacion', idpersonal=$idpersonal, observaciones='$observaciones', codigo = '$codigo' 
+			$sql = "UPDATE inhumacion set idcontrato=$idcontrato, iddifunto=$iddifunto, fechafallecimiento='$fechafallecimiento', fechainhumacion='$fechainhumacion', idpersonal=$idpersonal, nivel=$nivel, observaciones='$observaciones', codigo = '$codigo' 
 						WHERE idinhumacion = $idinhumacion";
 
 			$query = $conexion->query($sql);
@@ -180,7 +180,7 @@
 
 			global $conexion;
 
-			$sql = "select i.*, c.nrocontrato, i.codigo, c.fechacontrato, d.nombre as difunto, CONCAT(p.nombre,' ',p.apellidos) as personal, m.razonsocial as cementerio, s.nombre as sector, l.numero as lote, l.fila, l.columna  
+			$sql = "select i.*, c.nrocontrato, i.codigo, i.nivel, c.fechacontrato, d.nombre as difunto, CONCAT(p.nombre,' ',p.apellidos) as personal, m.razonsocial as cementerio, s.nombre as sector, l.numero as lote, l.fila, l.columna  
 				from inhumacion i left join difunto d on i.iddifunto = d.iddifunto 
 					 left join personal p on i.idpersonal = p.idpersonal 
 					 left join contrato c on i.idcontrato = c.idcontrato 

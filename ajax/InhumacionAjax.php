@@ -23,7 +23,7 @@
 
 			$iddifunto = $_POST["txtIdDifunto"];
 			$codigo = $_POST["txtCodigo"];
-
+			$nivel = $_POST["txtNivel"];
 			$fechafallecimiento = $_POST["txtFechaFallecimiento"];
 
 			$fechainhumacion = $_POST["txtFechaInhumacion"];
@@ -34,7 +34,7 @@
 
 			if(empty($_POST["txtIdInhumacion"])){
 
-				if($objInhumacion->Registrar($idcontrato,$codigo, $iddifunto,$fechafallecimiento,$fechainhumacion,$idpersonal,$observaciones)){
+				if($objInhumacion->Registrar($idcontrato, $iddifunto,$fechafallecimiento,$fechainhumacion,$idpersonal,$nivel,$observaciones, $codigo)){
 
 					echo "Inhumación registrada correctamente";
 
@@ -48,7 +48,7 @@
 
 				$idinhumacion = $_POST["txtIdInhumacion"];
 
-				if($objInhumacion->Modificar($idinhumacion, $codigo, $idcontrato,$iddifunto,$fechafallecimiento,$fechainhumacion,$idpersonal,$observaciones)){
+				if($objInhumacion->Modificar($idinhumacion, $idcontrato,$iddifunto,$fechafallecimiento,$fechainhumacion,$idpersonal ,$nivel,$observaciones,  $codigo)){
 
 					echo "La informacion de la Inhumación ha sido actualizada";
 
@@ -102,7 +102,7 @@
 
      				"0"=>$i,
 
-                    "1"=>$reg->idinhumacion,
+                    "1"=>$reg->codigo,
 
                     "2"=>$reg->nrocontrato,
 
@@ -114,7 +114,7 @@
 
                     "6"=>$reg->personal,
 
-                    "7"=>'<button class="btn btn-warning" data-toggle="tooltip" title="Editar" onclick="cargarDataInhumacion('.$reg->idinhumacion.','.$reg->codigo.','.$reg->idcontrato.','.$reg->iddifunto.',\''.$reg->fechafallecimiento.'\',\''.$reg->fechainhumacion.'\',\''.$reg->fecharegistro.'\','.$reg->idpersonal.',\''.$reg->observaciones.'\',\''.$reg->nrocontrato.'\',\''.$reg->fechacontrato.'\',\''.$reg->difunto.'\',\''.$reg->personal.'\',\''.$reg->cementerio.'\',\''.$reg->sector.'\',\''.$reg->lote.'\',\''.$reg->fila.'\',\''.$reg->columna.'\')"><i class="fa fa-pencil"></i> </button>&nbsp;'.
+                    "7"=>'<button class="btn btn-warning" data-toggle="tooltip" title="Editar" onclick="cargarDataInhumacion('.$reg->idinhumacion.','.$reg->codigo.', '.$reg->idcontrato.','.$reg->iddifunto.',\''.$reg->fechafallecimiento.'\',\''.$reg->fechainhumacion.'\',\''.$reg->fecharegistro.'\','.$reg->idpersonal.',\''.$reg->nivel.'\',\''.$reg->observaciones.'\',\''.$reg->nrocontrato.'\',\''.$reg->fechacontrato.'\',\''.$reg->difunto.'\',\''.$reg->personal.'\',\''.$reg->cementerio.'\',\''.$reg->sector.'\',\''.$reg->lote.'\',\''.$reg->fila.'\',\''.$reg->columna.'\')"><i class="fa fa-pencil"></i> </button>&nbsp;'.
      				'<button class="btn btn-danger" data-toggle="tooltip" title="Eliminar" onclick="eliminarInhumacion('.$reg->idinhumacion.')"><i class="fa fa-trash"></i> </button>&nbsp;'.
      				'<button class="btn btn-primary" data-toggle="tooltip" title="Certificado de Óbito" onclick="certificadoObito('.$reg->idinhumacion . ',\'' . trim($reg->nrocontrato) .'\')"><i class="fa fa-print"></i> </button>');
 

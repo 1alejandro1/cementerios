@@ -149,10 +149,7 @@ return $query;
         				WHERE   r.iddifunto = d.iddifunto
         			)";
 */
-        	$sql = 'SELECT * FROM difunto
-					WHERE EXISTS (SELECT iddifunto FROM
-					responsable WHERE difunto.iddifunto = responsable.iddifunto) AND NOT EXISTS (SELECT iddifunto FROM
-					inhumacion WHERE difunto.iddifunto = inhumacion.iddifunto)';
+        	$sql = 'SELECT * FROM difunto';
 
 
 			$query = $conexion->query($sql);
