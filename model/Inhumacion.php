@@ -125,6 +125,9 @@
 						$pdf->SetFont('Arial','B',14);
 						$pdf->Cell(0,18,utf8_decode('DATOS DE INHUMACIÓN'),'T',1);
 						$pdf->SetFont('Arial','',14);
+						$pdf->Cell(0,10,utf8_decode('Código de Inhumación: ' . $reg->codigo),0,1);
+						$pdf->Cell(0,10,utf8_decode('Nivel: ' . $reg->nivel),0,1);
+						$pdf->Cell(0,10,utf8_decode('Responsable(s): ' . $reg2->responsable),0,1);
 						$pdf->Cell(0,10,utf8_decode('Responsable(s): ' . $reg2->responsable),0,1);
 						$pdf->Cell(0,10,utf8_decode('Personal: ' . $reg->personal),0,1);
 						$fechafallecimiento = date_create($reg->fechafallecimiento);
@@ -132,7 +135,7 @@
 						$pdf->Cell(110,10,utf8_decode('Fecha de Fallecimiento: ' . date_format($fechafallecimiento,"d/m/Y")),0,0);
 						$pdf->Cell(110,10,utf8_decode('Fecha de Inhumación: ' . date_format($fechainhumacion,"d/m/Y")),0,1,'L');
 						$pdf->Cell(0,10,utf8_decode('Observaciones: ' . $reg->observaciones),0,0);
-						$pdf->Ln(30);
+						$pdf->Ln(20);
 						$pdf->Cell(110,10,'Fecha: ' . date('d/m/Y'),0,0);
 						$pdf->Cell(110,10,utf8_decode($reg3->usuario),0,1,'C');
 						$pdf->Cell(110,10,' ',0,0);
