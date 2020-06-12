@@ -108,11 +108,13 @@
 
 			$idejecutivoventa = $_POST["txtIdEjecutivoVenta2"];
 
+			$telefonoGarante = $_POST["txtTelefonoGarante"];
+
 			$datosok = 0;
  
-			if (empty($apellidosgarante) and empty($nombregarante) and empty($numdocumentogarante) and empty($direcciongarante)) {
+			if (empty($apellidosgarante) and empty($nombregarante) and empty($numdocumentogarante) and empty($direcciongarante) and empty($telefonoGarante)) {
 				$datosok = 1;
-			} else if (!empty($apellidosgarante) and !empty($nombregarante) and !empty($numdocumentogarante) and !empty($direcciongarante)) {
+			} else if (!empty($apellidosgarante) and !empty($nombregarante) and !empty($numdocumentogarante) and !empty($direcciongarante) and !empty($telefonoGarante)) {
 					$datosok = 1;
 			}
 
@@ -123,7 +125,7 @@
 
 				} else {
 
-						if($objEjecutivoVenta->ModificarGarante($idejecutivoventa, $apellidosgarante,$nombregarante,$numdocumentogarante,$direcciongarante)){
+						if($objEjecutivoVenta->ModificarGarante($idejecutivoventa, $apellidosgarante,$nombregarante,$numdocumentogarante,$direcciongarante, $telefonoGarante)){
 
 							echo "La información del Garante ha sido actualizada.";
 
@@ -180,7 +182,7 @@
 					
 					"5"=>$reg->fechaingreso,
 
-					"6"=>'<button class="btn btn-warning" data-toggle="tooltip" title="Editar" onclick="cargarDataEjecutivoVenta('.$reg->idejecutivoventa.',\''.$reg->apellidos.'\',\''.$reg->nombre.'\',\''.$reg->tipodocumento.'\',\''.$reg->numdocumento.'\',\''.$reg->direccion.'\',\''.$reg->telefono.'\',\''.$reg->celular.'\','.$reg->idestadocivil.',\''.$reg->email.'\',\''.$reg->estado.'\',\''.$reg->zona.'\',\''.$reg->ciudad.'\',\''.$reg->observaciones.'\',\''.$reg->fechaingreso.'\',\''.$reg->apellidosgarante.'\',\''.$reg->nombregarante.'\',\''.$reg->numdocumentogarante.'\',\''.$reg->direcciongarante.'\',\''.$reg->imagen1.'\',\''.$reg->imagen2.'\')"><i class="fa fa-pencil"></i> </button>&nbsp;'.
+					"6"=>'<button class="btn btn-warning" data-toggle="tooltip" title="Editar" onclick="cargarDataEjecutivoVenta('.$reg->idejecutivoventa.',\''.$reg->apellidos.'\',\''.$reg->nombre.'\',\''.$reg->tipodocumento.'\',\''.$reg->numdocumento.'\',\''.$reg->direccion.'\',\''.$reg->telefono.'\',\''.$reg->celular.'\','.$reg->idestadocivil.',\''.$reg->email.'\',\''.$reg->estado.'\',\''.$reg->zona.'\',\''.$reg->ciudad.'\',\''.$reg->observaciones.'\',\''.$reg->fechaingreso.'\',\''.$reg->apellidosgarante.'\',\''.$reg->nombregarante.'\',\''.$reg->numdocumentogarante.'\',\''.$reg->telefonogarante.'\',\''.$reg->direcciongarante.'\',\''.$reg->imagen1.'\',\''.$reg->imagen2.'\')"><i class="fa fa-pencil"></i> </button>&nbsp;'.
 
 					'<button class="btn btn-danger" data-toggle="tooltip" title="Eliminar" onclick="eliminarEjecutivoVenta('.$reg->idejecutivoventa.')"><i class="fa fa-trash"></i> </button>');
 

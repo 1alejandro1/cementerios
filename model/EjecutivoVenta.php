@@ -41,11 +41,11 @@
 		}
 
 
-		public function ModificarGarante($idejecutivoventa,$apellidosgarante,$nombregarante,$numdocumentogarante,$direcciongarante){
+		public function ModificarGarante($idejecutivoventa,$apellidosgarante,$nombregarante,$numdocumentogarante,$direcciongarante,$telefonoGarante){
 
 			global $conexion;
 
-			$sql = "UPDATE ejecutivoventa set apellidosgarante='$apellidosgarante',nombregarante='$nombregarante',numdocumentogarante='$numdocumentogarante',direcciongarante='$direcciongarante' 
+			$sql = "UPDATE ejecutivoventa set apellidosgarante='$apellidosgarante',nombregarante='$nombregarante',numdocumentogarante='$numdocumentogarante',direcciongarante='$direcciongarante',telefonogarante='$telefonoGarante' 
 
 						WHERE idejecutivoventa = $idejecutivoventa";
 

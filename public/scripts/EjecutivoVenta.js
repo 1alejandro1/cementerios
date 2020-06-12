@@ -110,10 +110,10 @@ function init(){
         var formData = new FormData($("#frmEjecutivoVentaGarante")[0]);
 
 		datosok = 0;
-		if ( ($("#txtNombreGarante").val().length) && ($("#txtApellidosGarante").val().length) && ($("#txtNumDocumentoGarante").val().length) && ($("#txtDireccionGarante").val().length) ) {
+		if ( ($("#txtNombreGarante").val().length) && ($("#txtApellidosGarante").val().length) && ($("#txtNumDocumentoGarante").val().length) && ($("#txtDireccionGarante").val().length) && ($("#txtTelefonoGarante").val().length)) {
 			datosok = 1;
 		} else {
-			if ( (!$("#txtNombreGarante").val().length) && (!$("#txtApellidosGarante").val().length) && (!$("#txtNumDocumentoGarante").val().length) && (!$("#txtDireccionGarante").val().length) ) {
+			if ( (!$("#txtNombreGarante").val().length) && (!$("#txtApellidosGarante").val().length) && (!$("#txtNumDocumentoGarante").val().length) && (!$("#txtDireccionGarante").val().length) && (!$("#txtTelefonoGarante").val().length)) {
 				datosok = 1;
 			}
 		}
@@ -139,7 +139,12 @@ function init(){
 //				swal("Mensaje del Sistema", "Falta completar la Dirección del Adjunto..." , "error");
 				$("#txtDireccionGarante").focus();
 			}
-        	return;
+			return;
+			if ( !$("#txtTelefonoGarante").val().length ) {
+				//				swal("Mensaje del Sistema", "Falta completar la Dirección del Adjunto..." , "error");
+								$("#txtTelefonoGarante").focus();
+							}
+							return;
 
 		}
 
@@ -216,7 +221,9 @@ function init(){
 
 	    $("#txtNumDocumentoGarante").val("");
 
-	    $("#txtDireccionGarante").val("");
+		$("#txtDireccionGarante").val("");
+		
+		$("#txtTelefonoGarante").val("");
 	}
 
 
@@ -354,7 +361,7 @@ function eliminarEjecutivoVenta(id){// funcion que llamamos del archivo ajax/Cat
 
 
 
-function cargarDataEjecutivoVenta(id,apellidos, nombre,tipodocumento,numdocumento,direccion,telefono,celular,estadocivil,email,estado, zona,ciudad,observaciones,fechaingreso,apellidosgarante,nombregarante,numdocumentogarante,direcciongarante,imagen1,imagen2) {
+function cargarDataEjecutivoVenta(id,apellidos, nombre,tipodocumento,numdocumento,direccion,telefono,celular,estadocivil,email,estado, zona,ciudad,observaciones,fechaingreso,apellidosgarante,nombregarante,numdocumentogarante,telefonogarante,direcciongarante,imagen1,imagen2) {
 
 		$("#VerForm").show();// mostramos el formulario
 
@@ -399,7 +406,9 @@ function cargarDataEjecutivoVenta(id,apellidos, nombre,tipodocumento,numdocument
 
 	    $("#txtApellidosGarante").val(apellidosgarante);
 
-	    $("#txtNumDocumentoGarante").val(numdocumentogarante);
+		$("#txtNumDocumentoGarante").val(numdocumentogarante);
+		
+		$("#txtTelefonoGarante").val(telefonogarante);
 
 	    $("#txtDireccionGarante").val(direcciongarante);
 
