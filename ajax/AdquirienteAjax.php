@@ -182,13 +182,13 @@
 
 					"1"=>$reg->apellidos.'&nbsp;'.$reg->nombre,
 
-					"2"=>$reg->tipodocumento,
+					"2"=> $reg->tipodocumento.'&nbsp;'.$reg->numdocumento,
+					
+					"3"=>$reg->email,
 
-					"3"=>$reg->numdocumento,
+					"4"=>$reg->telefono,
 
-					"4"=>$reg->email,
-
-					"5"=>$reg->telefono,
+					"5"=>$reg->celular,
 
 					"6"=>'<button class="btn btn-warning" data-toggle="tooltip" title="Editar" onclick="cargarDataAdquiriente('.$reg->idadquiriente.',\''.$reg->apellidos.'\',\''.$reg->nombre.'\',\''.$reg->tipodocumento.'\',\''.$reg->numdocumento.'\',\''.$reg->direccion.'\',\''.$reg->telefono.'\',\''.$reg->celular.'\','.$reg->idestadocivil.',\''.$reg->email.'\',\''.$reg->estado.'\',\''.$reg->zona.'\',\''.$reg->ciudad.'\',\''.$reg->observaciones.'\',\''.$reg->fechaingreso.'\',\''.$reg->apellidosadjunto.'\',\''.$reg->nombreadjunto.'\',\''.$reg->numdocumentoadjunto.'\',\''.$reg->direccionadjunto.'\',\''.$reg->imagen1.'\',\''.$reg->imagen2.'\')"><i class="fa fa-pencil"></i> </button>&nbsp;'.
 
