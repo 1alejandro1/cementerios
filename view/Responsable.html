@@ -1,0 +1,436 @@
+<div class="box">
+
+                <div class="box-header with-border">
+
+                  <h3 class="box-title">Responsables de Difuntos</h3>
+
+                  <div class="box-tools pull-right">
+
+                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+
+                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+
+                  </div>
+
+                </div>
+
+                <!-- /.box-header -->
+
+                <div class="box-body">
+
+                  	<div class="row">
+
+	                  	<div class="col-md-12">
+
+		                    <div class="col-sm-14"  id="VerForm">
+
+        <form role="form" name="frmResponsable" id="frmResponsable" enctype="multipart/form-data">
+
+            <div class="row">
+
+                <div class="col-lg-12 left">
+
+                    <div class="row">
+
+                         <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+
+                            <label>Los campos con (*) son obligatorios</label>
+
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+                            <div class="form-group has-success">
+
+                                <label>Tipo Documento (*):</label>
+
+                                <select id="cboTipoDocumento" required="" name="cboTipoDocumento" class="form-control">
+
+
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+                            <div class="form-group has-success">
+
+                                <label>Documento (*):</label>
+
+                                <input id="txtNumDocumento" type="text" maxlength="20" name="txtNumDocumento" required="" class="form-control" placeholder="Número de documento" autofocus="" />
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                            <div class="form-group">
+
+                                <label>Seleccione Persona para Inhumación (*):</label>
+
+                                <input id="txtIdDifunto" type="hidden" class="form-control" name="txtIdDifunto" required="" placeholder="" autofocus="" />
+
+                                <div class="input-group has-success">
+
+                                    <input id="txtDifunto" type="text" class="form-control" name="txtDifunto" required="" placeholder="Seleccione un Difunto" autofocus="" disabled/>
+
+                                    <span class="input-group-btn" >
+
+                                          <button type="button" class="btn btn-success" id="btnBuscarDifuntoRes"><i class='fa fa-search'></i>
+
+                                                        Buscar
+
+                                          </button>
+
+                                    </span>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-lg-12 left">
+
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                            <div class="form-group has-success">
+
+                                <input id="txtIdResponsable" type="hidden" maxlength="50" class="form-control" name="txtIdResponsable" placeholder="" autofocus="" />
+
+                                <label>Apellidos (*):</label>
+
+                                <input id="txtApellidos" type="text" maxlength="40" name="txtApellidos" required="" class="form-control" placeholder="Apellidos" autofocus="" />
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                            <div class="form-group has-success">
+
+                                <label>Nombre (*):</label>
+
+                                <input id="txtNombre" type="text" maxlength="20" name="txtNombre" required="" class="form-control" placeholder="Nombre" autofocus="" />
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-lg-12 left">
+
+                    <div class="row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                            <div class="form-group has-success">
+
+                                <label>Dirección:</label>
+
+                                <input id="txtDireccion" type="text" maxlength="100" name="txtDireccion" placeholder="Ingrese la dirección" class="form-control" autofocus="" />
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-12 left">
+
+                    <div class="row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                            <div class="form-group has-success">
+
+                                <label>EMail:</label>
+
+                                <input id="txtEmail" type="text" maxlength="70" name="txtEmail"  class="form-control" placeholder="Ingrese el Email" autofocus="" />
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-12 left">
+
+                    <div class="row">
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                            <div class="form-group has-success">
+
+                                <label>Teléfono:</label>
+
+                                <input id="txtTelefono" type="text" maxlength="20" name="txtTelefono" class="form-control" placeholder="Ingrese el teléfono" autofocus="" />
+
+                            </div>
+
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                            <div class="form-group has-success">
+
+                                <label>Celular:</label>
+
+                                <input id="txtCelular" type="text" maxlength="20" name="txtCelular" class="form-control" placeholder="Ingrese el teléfono celular" autofocus="" />
+
+                            </div>
+
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                            <div class="form-group has-success">
+
+                                <label>Estado (*):</label>
+
+                                <select class="form-control" required="" name="cboEstado">
+
+                                  <option value="A">Activo</option>
+
+                                  <option value="I">Inactivo</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+
+
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left">
+
+                        <h5></h5>
+
+                        <button class="btn btn-success" type="submit"><i class="fa fa-floppy-o"></i> Registrar</button>
+
+                        <a href="Responsable.php" class="btn btn-primary" ><i class="fa fa-remove"></i> Cancelar</a>
+
+                        <hr>
+
+                        <span class="lead text-primary"></span>
+
+
+
+
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+<button class="btn btn-primary" id="btnNuevo"><i class="fa fa-file"></i> Nuevo</button>
+
+
+		                    <br><br>
+
+		                    <div id="VerListado" class="table-responsive">
+
+
+
+            		<table id="tblResponsable" class="table table-striped table-bordered table-condensed table-hover" cellspacing="0" cellpadding="0" width="100%">
+
+                    <thead>
+
+                        <tr>
+
+                        	<th>#</th>
+
+                            <th>Nombre Completo</th>
+
+                            <th>Documento</th>
+
+                            <th>Num. Documento</th>
+
+                            <th>EMail</th>
+
+                            <th>Teléfono</th>
+
+                            <th>Opciones</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tfoot>
+
+                        <tr>
+
+                            <th>#</th>
+
+                            <th>Nombre Completo</th>
+
+                            <th>Documento</th>
+
+                            <th>Num. Documento</th>
+
+                            <th>Email</th>
+
+                            <th>Teléfono</th>
+
+                            <th>Opciones</th>
+
+                        </tr>
+
+                    </tfoot>
+
+
+
+                    <tbody id="responsable">
+
+
+
+                    </tbody>
+
+                </table>
+
+</div>
+
+		                    <!--Fin-Contenido-->
+
+                  		</div>
+
+                  	</div><!-- /.row -->
+
+                </div><!-- /.box-body -->
+
+              </div><!-- /.box -->
+
+
+
+
+<div id="modalListadoDifunto" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+
+  <div class="modal-dialog modal-lg">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        <h4 class="modal-title">Listado de Difuntos</h4>
+
+      </div>
+
+      <div class="modal-body">
+
+      <div class="table-responsive">
+
+        <table id="tblDifuntosRes" class="table table-striped table-bordered table-condensed table-hover" cellpadding="0" cellspacing="0" width="100%">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Seleccione</th>
+
+                            <th>#</th>
+
+                            <th>Nombre</th>
+
+                            <th>Tipo de Documento</th>
+
+                            <th>N° de Documento</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tfoot>
+
+                        <tr>
+
+                            <th>Seleccione</th>
+
+                            <th>#</th>
+
+                            <th>Nombre</th>
+
+                            <th>Tipo de Documento</th>
+
+                            <th>N° de Documento</th>
+
+                        </tr>
+
+                    </tfoot>
+
+
+
+                    <tbody id="DifuntoRes">
+
+
+
+                    </tbody>
+
+                </table>
+
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-remove"></i> Cerrar</button>
+
+        <button type="button" id="btnAgregarDifunto" class="btn btn-primary"><i class="fa fa-plus"></i> Agregar</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+    $('#liCementerio').addClass("treeview active");
+
+    $('#liResponsables').addClass("active");
+
+
+
+</script>
+

@@ -1,0 +1,167 @@
+<div class="box">
+
+    <div class="box-header with-border">
+
+      <h3 class="box-title">Tasas de Cambio Boliviano/Dolar Americano</h3>
+
+      <div class="box-tools pull-right">
+
+        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+
+
+
+        <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+
+      </div>
+
+    </div>
+
+    <!-- /.box-header -->
+
+    <div class="box-body">
+
+        <div class="col-lg-12 left">
+
+      	<div class="row">
+
+          	<div class="col-md-12">
+
+                <div class="col-sm-14"  id="VerFormTC">
+                    <form role="form" name="frmTasaCambio" id="frmTasaCambio" enctype="multipart/form-data">
+
+                        <div class="row">
+
+                            <div class="col-lg-12 left">
+
+                                <div class="row">
+
+                                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+
+                                        <label>Los campos con (*) son obligatorios</label>
+
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group has-success">
+                                            <input id="txtIdTasaCambio" type="hidden" maxlength="50" class="form-control" name="txtIdTasaCambio" placeholder="" autofocus="" />
+
+                                            <label>Fecha de Vigencia (*):</label>
+                                            <input id="txtFechaVigencia" type="date" name="txtFechaVigencia" required="" class="form-control" autofocus="" />
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                                        <div class="form-group has-success">
+
+                                            <label>Tasa de Cambio (Bolivianos x USD) (*):</label>
+
+                                            <input id="txtMontoTC" value="0" type="text" maxlength="10" name="txtMontoTC" required="" class="form-control" placeholder="Tasa de Cambio" autofocus="" />
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left left">
+
+                                    <h5></h5>
+
+                                    <button class="btn btn-success" type="submit"><i class="fa fa-floppy-o"></i> Registrar</button>
+
+                                    <a href="TasaCambio.php" class="btn btn-primary" ><i class="fa fa-remove"></i> Cancelar</a>
+
+                                    <hr>
+
+                                    <span class="lead text-primary"></span>
+
+
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" id="btnNuevoTC"><i class="fa fa-file"></i> Nueva Tasa de Cambio</button>
+
+            <br><br>
+
+            <div id="VerListadoMC" class="table-responsive">
+
+            	<table id="tblTasaCambio" class="table table-striped table-bordered table-condensed table-hover" cellpadding="0" cellspacing="0" width="100%">
+
+                    <thead>
+
+                        <tr>
+
+                        	<th>#</th>
+
+                            <th>Año</th>
+
+                            <th>Fecha de Vigencia</th>
+
+                            <th>Tasa de Cambio (Bolivianos x USD) </th>
+
+                            <th>Opciones</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tfoot>
+
+                        <tr>
+
+                            <th>#</th>
+
+                            <th>Año</th>
+
+                            <th>Fecha de Vigencia</th>
+
+                            <th>Tasa de Cambio (Bolivianos x USD) </th>
+
+                            <th>Opciones</th>
+
+                        </tr>
+
+                    </tfoot>
+
+
+
+                    <tbody id="TasaCambio">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div><!-- /.row -->
+        </div>
+
+    </div><!-- /.box-body -->
+
+</div><!-- /.box -->
+
+
+
+<script type="text/javascript">
+
+
+
+    $('#liMantenimiento').addClass("treeview active");
+
+    $('#liTasasCambios').addClass("active");
+
+
+
+</script>
+

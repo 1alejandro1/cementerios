@@ -1,0 +1,301 @@
+<div class="box">
+    <div class="box-header with-border">
+      <h3 class="box-title">Comisiones </h3>
+      <div class="box-tools pull-right">
+        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+        <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+      </div>
+    </div>
+
+    <!-- /.box-header -->
+
+    <div class="box-body">
+      	<div class="row">
+          	<div class="col-md-12">
+                <div class="col-sm-14"  id="VerForm">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Datos Generales</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="home" class="tab-pane fade in active">
+                            <form role="form" name="frmComision" id="frmComision" enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-lg-12 left">
+                                        <div class="row">
+                                            <br>
+                                            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                                                <label>Los campos con (*) son obligatorios</label>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group">
+                                                    <input id="txtIdComision" type="hidden" maxlength="50" class="form-control" name="txtIdComision" placeholder="" autofocus="" />
+                                                    <label>Número de Contrato (*):</label>
+                                                    <input id="txtIdContrato" type="hidden" class="form-control" name="txtIdContrato" placeholder="" autofocus="" />
+                                                    <div class="input-group has-success">
+                                                        <input id="txtContrato" type="text" class="form-control" name="txtContrato" required="" placeholder="Seleccione el Número de Contrato" autofocus="" />
+                                                        <span class="input-group-btn" >
+                                                              <button type="button" class="btn btn-success" id="btnBuscarContratoCom"><i class='fa fa-search'></i>
+
+                                                                            Buscar
+
+                                                              </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 left">
+                                                <div class="form-group has-success">
+                                                    <label>Cementerio (*):</label>
+                                                    <input id="txtCementerio" type="text" maxlength="150" class="form-control" name="txtCementerio" placeholder="" autofocus="" disabled/>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 left">
+                                                <div class="form-group has-success">
+                                                    <label>Sector (*):</label>
+                                                    <input id="txtSector" type="text" maxlength="100" class="form-control" name="txtSector" placeholder="" autofocus="" disabled/>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 left">
+                                                <div class="form-group has-success">
+                                                   <label>Número Lote (*):</label>
+                                                    <input id="txtLote" type="text" maxlength="50" class="form-control" name="txtLote" placeholder="" autofocus="" disabled/>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Fila:</label>
+                                                    <input id="txtFila" type="text" maxlength="10" name="txtFila" class="form-control" autofocus="" disabled/>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Columna:</label>
+                                                    <input id="txtColumna" type="text" maxlength="10" name="txtColumna" class="form-control" autofocus="" disabled/>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Fecha Contrato:</label>
+                                                    <input id="txtFechaContrato" type="date" name="txtFechaContrato" class="form-control" autofocus="" disabled/>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Precio Contrato: (USD)</label>
+                                                    <input id="txtPrecio" type="text" maxlength="10" name="txtPrecioi" disabled="" class="form-control" autofocus="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 left">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 left">
+                                                <div class="form-group has-success">
+                                                   <label>Ejecutivo de Venta:</label>
+                                                    <input id="txtEjecutivoVenta" type="text" maxlength="100" class="form-control" name="txtEjecutivoVenta" placeholder="" autofocus="" disabled/>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Fecha Comisión:</label>
+                                                    <input id="txtFechaComision" type="date" name="txtFechaComision" required="" class="form-control" autofocus=""/>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 left">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Porcentaje Comisión (*): (%)</label>
+                                                    <input id="txtPorcentaje" type="text" maxlength="10" name="txtPorcentaje" class="form-control" required="" placeholder="Ingrese el Porcentaje de Comisión" autofocus="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Monto Comisión (*): (USD)</label>
+                                                    <input id="txtMonto" type="text" maxlength="10" name="txtMonto" class="form-control" required="" placeholder="Ingrese el Monto de la Comisión" autofocus="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <input id="txtIdContrato2" type="hidden" maxlength="50" class="form-control" name="txtIdContrato2" placeholder="" autofocus="" />
+                                                    <label>Forma de Pago (*):</label>
+                                                    <select id="cboFormadePago" required="" name="cboFormadePago" class="form-control">
+                                                        <option value="1">1 Cuota</option>
+                                                        <option value="2">2 Cuotas</option>
+                                                        <option value="3">3 Cuotas</option>
+                                                        <option value="4">4 Cuotas</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 left">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Monto 1ra Cuota:</label>
+                                                    <input id="txtMonto1raCuota" type="text" maxlength="10" name="txtMonto1raCuota" disabled="" class="form-control" placeholder="Ingrese el Monto de 1ra Cuota" autofocus="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Fecha Pago (*):</label>
+                                                    <input id="txtFecha1raCuota" type="date" name="txtFecha1raCuota" required="" disabled="" class="form-control" autofocus=""/>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Monto 2da Cuota:</label>
+                                                    <input id="txtMonto2daCuota" type="text" maxlength="10" name="txtMonto2daCuota" disabled="" class="form-control" placeholder="Ingrese el Monto de 2da Cuota" autofocus="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Fecha Pago (*):</label>
+                                                    <input id="txtFecha2daCuota" type="date" name="txtFecha2daCuota" required="" disabled="" class="form-control" autofocus=""/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 left">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Monto 3ra Cuota:</label>
+                                                    <input id="txtMonto3raCuota" type="text" maxlength="10" name="txtMonto3raCuota" disabled="" class="form-control" placeholder="Ingrese el Monto de 3ra Cuota" autofocus="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Fecha Pago (*):</label>
+                                                    <input id="txtFecha3raCuota" type="date" name="txtFecha3raCuota" required="" disabled="" class="form-control" autofocus=""/>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Monto 4ta Cuota:</label>
+                                                    <input id="txtMonto4taCuota" type="text" maxlength="10" name="txtMonto4taCuota" disabled="" class="form-control" placeholder="Ingrese el Monto de 4ta Cuota" autofocus="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Fecha Pago (*):</label>
+                                                    <input id="txtFecha4taCuota" type="date" name="txtFecha4taCuota" required="" disabled="" class="form-control" autofocus=""/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left left">
+                                            <h5></h5>
+                                            <button id='btnRegComision' name='btnRegComision' class="btn btn-success" type="submit"><i class="fa fa-floppy-o"></i> Registrar</button>
+                                            <a href="Comision.php" class="btn btn-primary" ><i class="fa fa-remove"></i> Cancelar</a>
+                                            <hr>
+                                            <span class="lead text-primary"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="btnNuevo"><i class="fa fa-file"></i> Nueva Comisión</button>
+                <br><br>
+                <div id="VerListado" class="table-responsive">
+                	<table id="tblComision" class="table table-striped table-bordered table-condensed table-hover" cellpadding="0" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                            	<th>#</th>
+                                <th>Ejecutivo de Venta</th>
+                                <th>Contrato</th>
+                                <th>Fecha<br> Comision</th>
+                                <th>Cuotas</th>
+                                <th style="width:150px;">Opciones</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>#</th>
+                                <th>Ejecutivo de Venta</th>
+                                <th>Contrato</th>
+                                <th>Fecha<br> Comision</th>
+                                <th>Cuotas</th>
+                                <th style="width:150px;">Opciones</th>
+                            </tr>
+                        </tfoot>
+                        <tbody id="comision">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div><!-- /.row -->
+    </div><!-- /.box-body -->
+</div><!-- /.box -->
+
+
+<div id="modalListadoContrato" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Listado de Contratos</h4>
+      </div>
+      <div class="modal-body">
+      <div class="table-responsive">
+        <table id="tblContratosCom" class="table table-striped table-bordered table-condensed table-hover" cellpadding="0" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Seleccione</th>
+                            <th>#</th>
+                            <th>Nro Contrato</th>
+                            <th>Ejecutivo de Venta</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Seleccione</th>
+                            <th>#</th>
+                            <th>Nro Contrato</th>
+                            <th>Ejecutivo de Venta</th>
+                        </tr>
+                    </tfoot>
+                    <tbody id="ContratoDetalle">
+                    </tbody>
+                </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-remove"></i> Cerrar</button>
+        <button type="button" id="btnAgregarContratoCom" class="btn btn-primary"><i class="fa fa-plus"></i> Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script type="text/javascript">
+
+    $('#liContrato').addClass("treeview active");
+
+    $('#liComisiones').addClass("active");
+
+</script>
+

@@ -1,0 +1,218 @@
+<div class="box">
+
+    <div class="box-header with-border">
+
+      <h3 class="box-title">Sectores </h3>
+
+      <div class="box-tools pull-right">
+
+        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+
+
+
+        <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+
+      </div>
+
+    </div>
+
+    <!-- /.box-header -->
+
+    <div class="box-body">
+
+      	<div class="row">
+
+          	<div class="col-md-12">
+
+                <div class="col-sm-14"  id="VerForm">
+                    <form role="form" name="frmSector" id="frmSector" enctype="multipart/form-data">
+
+                        <div class="row">
+
+                            <div class="col-lg-12 left">
+
+                                <div class="row">
+
+                                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+
+                                        <label>Los campos con (*) son obligatorios</label>
+
+                                    </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 left">
+
+                    <div class="form-group has-success">
+
+                        <label>Cementerio (*):</label>
+
+                        <select id="cboCementerio" required="" name="cboCementerio" class="form-control">
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                        <div class="form-group has-success">
+
+                                            <input id="txtIdSector" type="hidden" maxlength="50" class="form-control" name="txtIdSector" placeholder="" autofocus="" />
+
+                                            <label>Nombre (*):</label>
+
+                                            <input id="txtNombre" type="text" maxlength="100" name="txtNombre" required="" class="form-control" placeholder="Ingrese el Nombre del Sector" autofocus="" />
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 left">
+
+                                <div class="row">
+
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                                        <div class="form-group has-success">
+
+                                            <label>Precio Necesidad Inmediata (*):</label>
+
+                                            <input id="txtPrecioNI" value="0" type="text" maxlength="10" name="txtPrecioNI" required="" class="form-control" placeholder="Precio NI" autofocus="" />
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                                        <div class="form-group has-success">
+
+                                            <label>Precio Necesidad Futura (*):</label>
+
+                                            <input id="txtPrecioNF" value="0" type="text" maxlength="10" name="txtPrecioNF" required="" class="form-control" placeholder="Precio NF" autofocus="" />
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                        <div class="form-group has-success">
+
+                                            <label>Observaciones (*):</label>
+
+                                            <input id="txtObservaciones" value="" type="text" maxlength="250" name="txtObservaciones" required="" class="form-control" placeholder="Observaciones" autofocus="" />
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left left">
+
+                                    <h5></h5>
+
+                                    <button class="btn btn-success" type="submit"><i class="fa fa-floppy-o"></i> Registrar</button>
+
+                                    <a href="Sector.php" class="btn btn-primary" ><i class="fa fa-remove"></i> Cancelar</a>
+
+                                    <hr>
+
+                                    <span class="lead text-primary"></span>
+
+
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" id="btnNuevo"><i class="fa fa-file"></i> Nuevo Sector</button>
+
+            <br><br>
+
+            <div id="VerListado" class="table-responsive">
+
+            	<table id="tblSector" class="table table-striped table-bordered table-condensed table-hover" cellpadding="0" cellspacing="0" width="100%">
+
+                    <thead>
+
+                        <tr>
+
+                        	<th>#</th>
+
+                            <th>Sector</th>
+
+                            <th>Precio NI</th>
+
+                            <th>Precio NF</th>
+
+                            <th>Opciones</th>
+
+                        </tr>
+
+                    </thead>
+
+
+
+                    <tfoot>
+
+                        <tr>
+
+                            <th>#</th>
+
+                            <th>Sector</th>
+
+                            <th>Precio NI</th>
+
+                            <th>Precio NF</th>
+
+                            <th>Opciones</th>
+
+                        </tr>
+
+                    </tfoot>
+
+
+
+                    <tbody id="sector">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div><!-- /.row -->
+
+    </div><!-- /.box-body -->
+
+</div><!-- /.box -->
+
+
+
+<script type="text/javascript">
+
+
+
+    $('#liInventario').addClass("treeview active");
+
+    $('#liSectores').addClass("active");
+
+
+
+</script>
+

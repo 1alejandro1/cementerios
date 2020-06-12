@@ -1,0 +1,274 @@
+<div class="box">
+
+    <div class="box-header with-border">
+
+      <h3 class="box-title">Lotes </h3>
+
+      <div class="box-tools pull-right">
+
+        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+
+
+        <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+
+      </div>
+
+    </div>
+
+    <!-- /.box-header -->
+
+    <div class="box-body">
+
+      	<div class="row">
+
+          	<div class="col-md-12">
+
+                <div class="col-sm-14"  id="VerForm">
+                    <form role="form" name="frmLote" id="frmLote" enctype="multipart/form-data">
+
+                        <div class="row">
+
+                            <div class="col-lg-12 left">
+
+                                <div class="row">
+
+                                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+
+                                        <label>Los campos con (*) son obligatorios</label>
+
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 left">
+
+                                        <div class="form-group has-success">
+
+                                            <input id="txtIdCementerioLot" type="hidden" maxlength="50" class="form-control" name="txtIdCementerioLot" placeholder="" autofocus="" />
+
+                                            <label>Cementerio (*):</label>
+
+                                            <select id="cboCementerioLot" required="" name="cboCementerioLot" class="form-control">
+
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 left">
+
+                                        <div class="form-group has-success">
+
+                                            <input id="txtIdSectorLot" type="hidden" maxlength="50" class="form-control" name="txtIdSectorLot" placeholder="" autofocus="" />
+
+                                            <label>Sector (*):</label>
+
+                                            <select id="cboSectorLot" required="" name="cboSectorLot" class="form-control">
+
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 left">
+
+                                        <div class="form-group has-success">
+
+                                            <label>Tipo de Lote (*):</label>
+
+                                            <select id="cboTipoLote" required="" name="cboTipoLote" class="form-control">
+
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 left">
+
+                                        <div class="form-group has-success">
+
+                                            <label>Estado del Lote (*):</label>
+
+                                            <select id="cboEstadoLote" required="" name="cboEstadoLote" class="form-control">
+
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                                        <div class="form-group has-success">
+
+                                            <input id="txtIdLote" type="hidden" maxlength="50" class="form-control" name="txtIdLote" placeholder="" autofocus="" />
+
+                                            <label>Número (*):</label>
+
+                                            <input id="txtNumero" type="text" maxlength="10" name="txtNumero" required="" class="form-control" placeholder="Ingrese el Número del Lote" autofocus="" />
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                                        <div class="form-group has-success">
+
+                                            <label>Fila (*):</label>
+
+                                            <input id="txtFila" type="text" maxlength="10" name="txtFila" required="" class="form-control" placeholder="Ingrese la Fila del Lote" autofocus="" />
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                                        <div class="form-group has-success">
+
+                                            <label>Columna (*):</label>
+
+                                            <input id="txtColumna" type="text" maxlength="10" name="txtColumna" required="" class="form-control" placeholder="Ingrese la Columna del Lote" autofocus="" />
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 left">
+
+                                <div class="row">
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                        <div class="form-group has-success">
+
+                                            <label>Observaciones:</label>
+
+                                            <input id="txtObservaciones" value="" type="text" maxlength="250" name="txtObservaciones"  class="form-control" placeholder="Observaciones" autofocus="" />
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left left">
+
+                                    <h5></h5>
+
+                                    <button class="btn btn-success" type="submit"><i class="fa fa-floppy-o"></i> Registrar</button>
+
+                                    <a href="Lote.php" class="btn btn-primary" ><i class="fa fa-remove"></i> Cancelar</a>
+
+                                    <hr>
+
+                                    <span class="lead text-primary"></span>
+
+
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" id="btnNuevo"><i class="fa fa-file"></i> Nuevo Lote</button>
+
+            <br><br>
+
+            <div id="VerListado" class="table-responsive">
+
+            	<table id="tblLote" class="table table-striped table-bordered table-condensed table-hover" cellpadding="0" cellspacing="0" width="100%">
+
+                    <thead>
+
+                        <tr>
+
+                        	<th>#</th>
+
+                            <th>Sector</th>
+
+                            <th>Tipo</th>
+
+                            <th>Número</th>
+
+                            <th>Fila</th>
+
+                            <th>Columna</th>
+
+                            <th>Estado</th>
+
+                            <th>Opciones</th>
+
+                        </tr>
+
+                    </thead>
+
+
+
+                    <tfoot>
+
+                        <tr>
+
+                            <th>#</th>
+
+                            <th>Sector</th>
+
+                            <th>Tipo</th>
+
+                            <th>Número</th>
+
+                            <th>Fila</th>
+
+                            <th>Columna</th>
+
+                            <th>Estado</th>
+
+                            <th>Opciones</th>
+
+                        </tr>
+
+                    </tfoot>
+
+
+
+                    <tbody id="lote">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div><!-- /.row -->
+
+    </div><!-- /.box-body -->
+
+</div><!-- /.box -->
+
+
+
+<script type="text/javascript">
+
+
+
+    $('#liInventario').addClass("treeview active");
+
+    $('#liLotes').addClass("active");
+
+
+
+</script>
+

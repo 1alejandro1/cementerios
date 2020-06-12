@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Software Empresarial | Soluciones Tecnologicas Alfa</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <!-- SHADOWBOX ZOOM IMAGEN -->
+    <link rel="stylesheet" type="text/css" href="public/shadowbox/shadowbox.css">
+    <script type="text/javascript" src="public/shadowbox/shadowbox.js"></script>
+    <script type="text/javascript">
+    Shadowbox.init();
+</script>
+    <!-- fin script SHADOWBOX ZOOM IMAGEN -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="public/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="public/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="public/css/_all-skins.min.css">
+    <link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="public/css/dataTables.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="public/js/swat/sweet/lib/sweet-alert.css">
+    <link rel="stylesheet" type="text/css" href="public/css/buttons.dataTables.min.css">
+
+    <!-- jQuery 2.1.4 -->
+    <script type="text/javascript" src="public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="public/js/jquery.numeric.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script type="text/javascript" src="public/js/bootstrap.min.js"></script>
+    <!-- AdminLTE App -->
+    <script type="text/javascript" src="public/js/app.min.js"></script>
+    <script type="text/javascript" src="public/js/bootbox.min.js"></script>
+
+    <script type="text/javascript" src="public/js/dataTables.js"></script>
+
+    <script type="text/javascript" src="public/js/swat/sweet/lib/sweet-alert.min.js"></script>
+    <script type="text/javascript" src="public/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="public/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="public/js/jszip.min.js"></script>
+    <script type="text/javascript" src="public/js/pdfmake.min.js"></script>
+    <script type="text/javascript" src="public/js/vfs_fonts.js"></script>
+    <script type="text/javascript" src="public/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="public/js/Chart.js"></script>
+
+    <script type="text/javascript" src="public/scripts/Cementerio.js"></script>
+    <script type="text/javascript" src="public/scripts/Sector.js"></script>
+    <script type="text/javascript" src="public/scripts/Lote.js"></script>
+    <script type="text/javascript" src="public/scripts/TipoLote.js"></script>
+    <script type="text/javascript" src="public/scripts/EstadoLote.js"></script>
+    <script type="text/javascript" src="public/scripts/CuotaMtto.js"></script>
+    <script type="text/javascript" src="public/scripts/MontoCuota.js"></script>
+    <script type="text/javascript" src="public/scripts/Planimetria.js"></script>
+
+    <script type="text/javascript" src="public/scripts/Personal.js"></script>
+    <script type="text/javascript" src="public/scripts/Difunto.js"></script>
+    <script type="text/javascript" src="public/scripts/Responsable.js"></script>
+    <script type="text/javascript" src="public/scripts/Inhumacion.js"></script>
+    <script type="text/javascript" src="public/scripts/Exhumacion.js"></script>
+
+    <script type="text/javascript" src="public/scripts/Adquiriente.js"></script>
+    <script type="text/javascript" src="public/scripts/EjecutivoVenta.js"></script>
+    <script type="text/javascript" src="public/scripts/Comision.js"></script>
+    <script type="text/javascript" src="public/scripts/Kardex.js"></script>
+
+    <script type="text/javascript" src="public/scripts/Contrato.js"></script>
+    <script type="text/javascript" src="public/scripts/Cobranza.js"></script>
+    <script type="text/javascript" src="public/scripts/Usuario.js"></script>
+    <script type="text/javascript" src="public/scripts/EstadoCivil.js"></script>
+    <script type="text/javascript" src="public/scripts/TasaCambio.js"></script>
+
+    <script type="text/javascript" src="public/scripts/Global.js"></script>
+<!--
+    <script type="text/javascript" src="public/scripts/jquery.toaster.js"></script>
+-->
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="ico/internet.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/internet.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/internet.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/internet.ico">
+    <link rel="apple-touch-icon-precomposed" href="ico/ico/internet.ico">
+
+  <style type="text/css">
+    input[type="text"]{
+      text-align: center;
+    }
+  </style>
+
+  </head>
+  <body class="hold-transition skin-blue sidebar-mini">
+
+    <div class="wrapper">
+
+      <header class="main-header">
+
+        <!-- Logo -->
+        <a href="#" class="logo"  style="Background-color:#2d9c69  !important;  border-right: solid 1px white;" >
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>CP</b></span>
+          <!-- logo for regular state and mobile devices -->
+          <span  class="logo-lg" ><b>CAMPOS DE PAZ</b></span>
+        </a>
+
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top"  style="Background-color:#2d9c69 !important; " role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Navegación</span>
+          </a>
+
+          <!-- Navbar Right Menu -->
+          <div class="navbar-custom-menu">
+
+            <ul class="nav navbar-nav">
+              <!-- Messages: style can be found in dropdown.less-->
+              <!-- Notifications: style can be found in dropdown.less -->
+
+              <li class="dropdown notifications-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-bell-o"></i>
+                  <span class="label label-warning">Hoy</span>
+                </a>
+
+                <?php
+/*
+                require_once "model/Grafico.php";
+
+                $objGlobal = new Grafico();
+
+                $query_Global = $objGlobal->Totales($_SESSION["idcementerio"]);
+                while ($reg_Global= $query_Global->fetch_object()) {
+                      $moneda=$reg_Global->moneda;
+                      $totalingreso=$reg_Global->totalingreso;
+                      $totalcontado=$reg_Global->totalcontado;
+                      $totalcredito=$reg_Global->totalcredito;
+                }
+*/
+                ?>
+                <ul class="dropdown-menu">
+                  <li class="header">Estadísticas del día de hoy</li>
+                  <li>
+                    <!-- inner menu: contains the actual data -->
+                    <ul class="menu">
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-warning text-yellow"></i> Total Difuntos <?php echo $moneda." ".$totalingreso;?>
+                        </a>
+
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-shopping-cart text-green"></i> Total Responsables <?php echo $moneda." ".$totalcontado;?>
+                        </a>
+                      </li>
+
+
+
+
+                    </ul>
+                  </li>
+                  <li class="footer"><a href="#">Ver todo</a></li>
+                </ul>
+              </li>
+              <!-- User Account: style can be found in dropdown.less -->
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img src="<?php echo $_SESSION["logo"] ?>" class="user-image" alt="User Image">
+                  <span class="hidden-xs"><?php echo $_SESSION["cementerio"]?></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- User image -->
+                  <li class="user-header">
+                    <img src="<?php echo $_SESSION["logo"] ?>" class="img-circle" alt="User Image">
+                    <p>
+                      <?php echo $_SESSION["personal"] ?> - <?php echo $_SESSION["tipo_usuario"] ?>
+                      <small><?php echo $_SESSION["tipo_usuario"] ?>, <?php echo $_SESSION["cementerio"]?> <?php echo $_SESSION["direccion"]?> </small>
+                    </p>
+                  </li>
+
+                  <!--
+                  <li class="user-footer">
+                    <div class="pull-left">
+                      <a href="acceder.php" class="btn btn-default btn-flat">Cambiar Cementerio</a>
+                    </div>Menu Footer-->
+                    <div class="" style ="width :100%;">
+                      <a href="ajax/UsuarioAjax.php?op=Salir" class="btn btn-default btn-flat">Salir</a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+
+        </nav>
+      </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- Sidebar user panel -->
+          <div class="user-panel" style ="height :65px !important;" >
+            <div class="pull-left image">
+              <img src="<?php echo $_SESSION["foto"] ?>" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+              <p><?php echo $_SESSION["personal"] ?></p>
+              <a href="#"><i class="fa fa-circle text-success"></i>Activo</a>
+            </div>
+          </div>
+          <!-- clock widget start -->
+<!--
+          <script type="text/javascript"> var css_file=document.createElement("link"); css_file.setAttribute("rel","stylesheet"); css_file.setAttribute("type","text/css"); css_file.setAttribute("href","//s.bookcdn.com//css/cl/bw-cl-120x45.css"); document.getElementsByTagName("head")[0].appendChild(css_file); </script> <div id="tw_5_1781766517"><div style="width:130px; height:45px; margin: 0 auto;"><a href="https://hotelmix.es/time/la-paz-13481">La Paz</a><br/></div></div> <script type="text/javascript"> function setWidgetData_1781766517(data){ if(typeof(data) != 'undefined' && data.results.length > 0) { for(var i = 0; i < data.results.length; ++i) { var objMainBlock = ''; var params = data.results[i]; objMainBlock = document.getElementById('tw_'+params.widget_type+'_'+params.widget_id); if(objMainBlock !== null) objMainBlock.innerHTML = params.html_code; } } } var clock_timer_1781766517 = -1; </script> <script type="text/javascript" charset="UTF-8" src="https://widgets.booked.net/time/info?ver=2&domid=582&type=5&id=1781766517&scode=124&city_id=13481&wlangid=4&mode=1&details=0&background=5b8257&color=ffffff&add_background=a0a1a1&add_color=ffffff&head_color=ffffff&border=3&transparent=1"></script>
+-->
+          <!-- clock widget end -->
+
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+
+          <ul class="sidebar-menu">
+
+         <li id="liEstadistica" class="active treeview">
+           <a href="Escritorio.php">
+         <i class="fa fa-dashboard"></i> <span>Escritorio</span> <i class=""></i>
+           </a>
+         <!--<ul class="treeview-menu">
+         <li id="liEscritorio"><a href="Escritorio.php"><i class="fa fa-circle-o"></i> Escritorio</a></li>
+         </ul>-->
+         </li>
+            <li class="treeview" id="liInventario">
+              <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span>Inventarios</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li id="liCementerios"><a href="Cementerio.php" accesskey="c"><i class="fa fa-circle-o"></i> Cementerios</a></li>
+                <li id="liSectores"><a href="Sector.php" accesskey="c"><i class="fa fa-circle-o"></i> Sectores</a></li>
+                <li id="liLotes"><a href="Lote.php" accesskey="c"><i class="fa fa-circle-o"></i> Lotes</a></li>
+
+                <ul class="treeview">
+                  <li id="liTipoLote"><a href="TipoLote.php" accesskey="c"><i class="fa fa-circle-o"></i> Tipos de Lotes</a></li>
+                  <li id="liEstadoLote"><a href="EstadoLote.php" accesskey="d"><i class="fa fa-circle-o"></i> Estados de Lotes</a></li>
+                </ul>
+
+                <li id="liCuotaMttos"><a href="CuotaMtto.php" accesskey="c"><i class="fa fa-circle-o"></i> Cuotas de Mantenimiento</a></li>
+
+                <ul class="treeview">
+                  <li id="liMontoCuotaMtto"><a href="MontoCuota.php" accesskey="c"><i class="fa fa-circle-o"></i> Monto de Cuotas</a></li>
+                </ul>
+
+
+                <li id="liPlanimetrias"><a href="Planimetria.php" accesskey="c"><i class="fa fa-circle-o"></i> Planimetrías</a></li>
+              </ul>
+            </li>
+            <li class="treeview" id="liCementerio">
+              <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span>Cementerio</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li id="liPersonal"><a href="Personal.php" accesskey="c"><i class="fa fa-circle-o"></i> Personal</a></li>
+                <li id="liDifuntos"><a href="Difunto.php" accesskey="d"><i class="fa fa-circle-o"></i> Difuntos</a></li>
+                <li id="liResponsables"><a href="Responsable.php" accesskey="d"><i class="fa fa-circle-o"></i> Responsables</a></li>
+                <li id="liInhumaciones"><a href="Inhumacion.php" accesskey="d"><i class="fa fa-circle-o"></i> Inhumaciones</a></li>
+                <li id="liExhumaciones"><a href="Exhumacion.php" accesskey="d"><i class="fa fa-circle-o"></i> Exhumaciones</a></li>
+              </ul>
+            </li>
+            <li class="treeview" id="liContrato">
+              <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span>Contratos</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li id="liContratos"><a href="Contrato.php" accesskey="c"><i class="fa fa-circle-o"></i> Contratos</a></li>
+                <li id="liCobranzas"><a href="Cobranza.php" accesskey="d"><i class="fa fa-circle-o"></i> Cobranzas</a></li>
+                <li id="liAdquirientes"><a href="Adquiriente.php" accesskey="d"><i class="fa fa-circle-o"></i> Adquirientes</a></li>
+                <li id="liEjecutivosVentas"><a href="EjecutivoVenta.php" accesskey="d"><i class="fa fa-circle-o"></i> Ejecutivos de Ventas</a></li>
+                <li id="liComisiones"><a href="Comision.php" accesskey="d"><i class="fa fa-circle-o"></i> Comisiones</a></li>
+                <li id="liKardex"><a href="Kardex.php" accesskey="d"><i class="fa fa-circle-o"></i> Kardex</a></li>
+              </ul>
+            </li>
+            <li class="treeview" id="liMantenimiento">
+              <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span>Mantenimiento</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li id="liUsuarios"><a href="Usuario.php" accesskey="d"><i class="fa fa-circle-o"></i> Usuarios</a></li>
+                <li id="liEstadosCiviles"><a href="EstadoCivil.php" accesskey="d"><i class="fa fa-circle-o"></i> Estados Civiles</a></li>
+                <li id="liTasasCambios"><a href="TasaCambio.php" accesskey="d"><i class="fa fa-circle-o"></i> Tasas de Cambio</a></li>
+                <li id="liGeneral"><a href="Global.php" accesskey="d"><i class="fa fa-circle-o"></i> General</a></li>
+              </ul>
+            </li>
+
+             <li>
+              <a href="Files/Manual/Manual.pdf" target="_blank">
+                <i class="fa fa-plus-square"></i> <span>Ayuda</span>
+                <small class="label pull-right bg-red">PDF</small>
+              </a>
+            </li>
+            <li id="copiaSeguridad">
+
+            <a href="CopiaSeguridad.php">
+              <i class="fa fa-circle-o"></i> <span>Copia de Seguridad</span>
+            </a>
+
+            </li>
+
+            <li id="liAcerca"><a href="Acerca.php">
+                <i class="fa fa-info-circle"></i> <span>Acerca De...</span></a></li>
+                <small class="label pull-right bg-yellow">BOL</small>
+              </a>
+            </li>
+            <li>
+              <a href="ajax/UsuarioAjax.php?op=Salir">
+                <i class="fa fa-close"></i> <span>Cerrar Sesion</span>
+
+              </a>
+            </li>
+
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+
+        <!-- Main content -->
+        <section class="content">
+
+          <div class="row">
+            <div class="col-md-12">
+              <input type="hidden" name="txtMnuAlmacen" id="txtMnuAlmacen" value="<?php echo $_SESSION["mnu_almacen"]; ?>">
+              <input type="hidden" name="txtMnuAlmacen" id="txtMnuCompras" value="<?php echo $_SESSION["mnu_compras"]; ?>">
+              <input type="hidden" name="txtMnuAlmacen" id="txtMnuVentas" value="<?php echo $_SESSION["mnu_ventas"]; ?>">
+              <input type="hidden" name="txtMnuAlmacen" id="txtMnuMantenimiento" value="<?php echo $_SESSION["mnu_mantenimiento"]; ?>">
+              <input type="hidden" name="txtMnuAlmacen" id="txtMnuSeguridad" value="<?php echo $_SESSION["mnu_seguridad"]; ?>">
+              <input type="hidden" name="txtMnuAlmacen" id="txtMnuConsultaCompras" value="<?php echo $_SESSION["mnu_consulta_compras"]; ?>">
+              <input type="hidden" name="txtMnuAlmacen" id="txtMnuConsultaVentas" value="<?php echo $_SESSION["mnu_consulta_ventas"]; ?>">
+              <input type="hidden" name="txtMnuAlmacen" id="txtMnuAdmin" value="<?php echo $_SESSION["mnu_admin"]; ?>">

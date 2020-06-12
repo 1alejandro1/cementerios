@@ -1,0 +1,241 @@
+<div class="box">
+
+    <div class="box-header with-border">
+
+      <h3 class="box-title">Planimetría </h3>
+
+      <div class="box-tools pull-right">
+
+        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+
+
+        <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+
+      </div>
+
+    </div>
+
+    <!-- /.box-header -->
+
+    <div class="box-body">
+
+
+                <div class="col-sm-14"  id="VerFormReserva">
+                    <form role="form" name="frmReserva" id="frmReserva" enctype="multipart/form-data">
+
+                        <div class="row">
+
+                            <div class="col-lg-12 left">
+
+                                <div class="row">
+
+                                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+
+                                        <label>Los campos con (*) son obligatorios</label>
+
+                                    </div>
+
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+
+                                        <div class="form-group has-success">
+
+                                            <input id="txtIdLote" type="hidden" maxlength="50" class="form-control" name="txtIdLote" placeholder="" autofocus="" />
+
+                                            <input id="txtIdEstadoLote" type="hidden" maxlength="50" class="form-control" name="txtIdEstadoLote" placeholder="" autofocus="" />
+
+                                            <input id="txtTipoMovimiento" type="hidden" maxlength="50" class="form-control" name="txtTipoMovimiento" placeholder="" autofocus="" />
+
+                                            <label>Nombre (*):</label>
+
+                                            <input id="txtNombreReserva" type="text" maxlength="40" name="txtNombreReserva" required="" class="form-control" placeholder="Ingrese el Nombre del Reservante" autofocus="" />
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+                                        <div class="form-group has-success">
+
+                                            <label>Monto Reserva (*):</label>
+
+                                            <input id="txtMontoReserva" value="0" type="text" maxlength="10" name="txtMontoReserva" required="" class="form-control" placeholder="Monto de Reserva" autofocus="" />
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                                        <div class="form-group has-success">
+
+                                            <label>Usuario que Realizo la Reservación:</label>
+
+                                            <input id="txtLogin" value="0" disabled="" type="text" maxlength="10" name="txtLogin" class="form-control" autofocus="" />
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                                        <div class="form-group has-success">
+
+                                            <label>Usuario Última Actualización:</label>
+
+                                            <input id="txtLoginActualizo" value="0" disabled="" type="text" maxlength="10" name="txtLoginActualizo" class="form-control" autofocus="" />
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left left">
+
+                                    <h5></h5>
+
+                                    <button id="btnEnviar" class="btn btn-success" type="submit"><i class="fa fa-floppy-o"></i> Registrar</button>
+
+                                    <a href="Planimetria.php" class="btn btn-primary" ><i class="fa fa-remove"></i> Cancelar</a>
+
+                                    <hr>
+
+                                    <span class="lead text-primary"></span>
+
+
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+
+
+
+
+
+
+
+        <div class="col-lg-12 left">
+
+          	<div class="row">
+
+                <br><br>
+
+                <div id="VerListadoPlan" class="table-responsive">
+
+                	<table id="tblLotePlan" class="table table-striped table-bordered table-condensed table-hover" cellpadding="0" cellspacing="0" width="100%">
+
+                        <thead>
+
+                            <tr>
+
+                                <th></th>
+
+                                <th></th>
+
+                                <th></th>
+
+                                <th></th>
+
+                                <th></th>
+
+                                <th></th>
+
+                                <th></th>
+
+                                <th colspan="2" style="text-align:center;">Lote Reservado</th>
+
+                                <th></th>
+
+
+                            </tr>
+                            <tr>
+
+                            	<th>#</th>
+
+                                <th>Sector</th>
+
+                                <th>Tipo</th>
+
+                                <th>Número</th>
+
+                                <th>Fila</th>
+
+                                <th>Columna</th>
+
+                                <th>Estado</th>
+
+                                <th>Reservado por</th>
+
+                                <th>Monto</th>
+
+                                <th>Opciones</th>
+
+                            </tr>
+
+                        </thead>
+
+
+
+                        <tfoot>
+
+                            <tr>
+
+                                <th>#</th>
+
+                                <th>Sector</th>
+
+                                <th>Tipo</th>
+
+                                <th>Número</th>
+
+                                <th>Fila</th>
+
+                                <th>Columna</th>
+
+                                <th>Estado</th>
+
+                                <th>Reservado por</th>
+
+                                <th>Monto</th>
+
+                                <th>Opciones</th>
+
+                            </tr>
+
+                        </tfoot>
+
+
+
+                        <tbody id="planimetria">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div><!-- /.row -->
+        </div><!-- /.row -->
+
+    </div><!-- /.box-body -->
+
+</div><!-- /.box -->
+
+
+
+<script type="text/javascript">
+
+
+
+    $('#liInventario').addClass("treeview active");
+
+    $('#liPlanimetrias').addClass("active");
+
+
+
+</script>
+

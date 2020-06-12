@@ -1,0 +1,433 @@
+<div class="box">
+    <div class="box-header with-border">
+      <h3 class="box-title">Contratos </h3>
+      <div class="box-tools pull-right">
+        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+        <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+      </div>
+    </div>
+
+    <!-- /.box-header -->
+
+    <div class="box-body">
+      	<div class="row">
+          	<div class="col-md-12">
+                <div class="col-sm-14"  id="VerForm">
+                    <ul class="nav nav-tabs" role="tablist" id='tabmenu'>
+                        <li class="active"><a href="#home" id='tabhome' aria-controls="home" role="tab" data-toggle="tab">Datos Generales</a></li>
+                        <li><a href="#homepreciosycuotas" id='tabprecios' aria-controls="home" role="tab" data-toggle="tab">Precio y Cuotas</a></li>
+                        <li><a href="#homeplandepagos" id='tabplan' aria-controls="home" role="tab" data-toggle="tab">Plan de Pagos</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="home" class="tab-pane fade in active">
+                            <form role="form" name="frmContrato" id="frmContrato" enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-lg-12 left">
+                                        <div class="row">
+                                            <br>
+                                            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                                                <label>Los campos con (*) son obligatorios</label>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <input id="txtIdContrato" type="hidden" maxlength="50" class="form-control" name="txtIdContrato" placeholder="" autofocus="" />
+                                                    <label>Número de Contrato (*):</label>
+                                                    <input id="txtNroContrato" type="text" maxlength="10" name="txtNroContrato" required="" class="form-control" placeholder="Ingrese el Número del Contrato" autofocus="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 left">
+                                                <div class="form-group has-success">
+                                                    <label>Cementerio (*):</label>
+                                                    <select id="cboCementerioLot" required="" name="cboCementerioLot" class="form-control">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 left">
+                                                <div class="form-group has-success">
+                                                    <input id="txtIdSectorCto" type="hidden" maxlength="50" class="form-control" name="txtIdSectorCto" placeholder="" autofocus="" />
+                                                    <label>Sector (*):</label>
+                                                    <select id="cboSectorSelCto" required="" name="cboSectorSelCto" class="form-control">
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 left">
+                                                <div class="form-group has-success">
+                                                    <input id="txtIdLoteCto" type="hidden" maxlength="50" class="form-control" name="txtIdLoteCto" placeholder="" autofocus="" />
+                                                   <label>Número Lote (*):</label>
+                                                    <select id="cboLoteSelCto" required="" name="cboLoteSelCto" class="form-control">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Fila:</label>
+                                                    <input id="txtFila" type="text" maxlength="10" name="txtFila" class="form-control" autofocus="" disabled/>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Columna:</label>
+                                                    <input id="txtColumna" type="text" maxlength="10" name="txtColumna" class="form-control" autofocus="" disabled/>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Fecha de Contrato (*):</label>
+                                                    <input id="txtFechaContrato" type="date" name="txtFechaContrato" required="" class="form-control" autofocus="" />
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 left">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <label>Seleccione Adquiriente (*):</label>
+                                                    <input id="txtIdAdquiriente" type="hidden" class="form-control" name="txtIdAdquiriente" placeholder="" autofocus="" />
+                                                    <div class="input-group has-success">
+                                                        <input id="txtAdquiriente" type="text" class="form-control" name="txtAdquiriente" required="" placeholder="Seleccione el Adquiriente" autofocus="" />
+                                                        <span class="input-group-btn" >
+                                                              <button type="button" class="btn btn-success" id="btnBuscarAdquirienteCto"><i class='fa fa-search'></i>
+
+                                                                            Buscar
+
+                                                              </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <label>Seleccione Ejecutivo de Venta (*):</label>
+                                                    <input id="txtIdEjecutivoVenta" type="hidden" class="form-control" name="txtIdEjecutivoVenta" placeholder="" autofocus="" />
+                                                    <div class="input-group has-success">
+                                                        <input id="txtEjecutivoVenta" type="text" class="form-control" name="txtEjecutivoVenta" required="" placeholder="Seleccione el Ejecutivo de Venta" autofocus="" />
+                                                        <span class="input-group-btn" >
+                                                              <button type="button" class="btn btn-success" id="btnBuscarEjecutivoVentaCto"><i class='fa fa-search'></i>
+
+                                                                            Buscar
+
+                                                              </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 left">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Observaciones:</label>
+                                                    <input id="txtObservaciones" value="" type="text" maxlength="250" name="txtObservaciones" class="form-control" placeholder="Observaciones" autofocus="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left left">
+                                            <h5></h5>
+                                            <button class="btn btn-success" type="submit"><i class="fa fa-floppy-o"></i> Registrar</button>
+                                            <a href="Contrato.php" class="btn btn-primary" ><i class="fa fa-remove"></i> Cancelar</a>
+                                            <hr>
+                                            <span class="lead text-primary"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div id="homepreciosycuotas" class="tab-pane fade">
+                            <form role="form" name="frmContrato2" id="frmContrato2" enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-lg-12 left">
+                                        <div class="row">
+                                            <br>
+                                            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                                                <label>Los campos con (*) son obligatorios</label>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <input id="txtIdContrato2" type="hidden" maxlength="50" class="form-control" name="txtIdContrato2" placeholder="" autofocus="" />
+                                                    <label>Tipo de Precio (*):</label>
+                                                    <select id="cboTipoPrecio" required="" name="cboTipoPrecio" class="form-control">
+                                                        <option value="PNI">Precio Necesidad Inmediata</option>
+                                                        <option value="PNF">Precio Necesidad Futura</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Precio del Lote (*):</label>
+                                                    <input id="txtPrecio" type="text" maxlength="10" name="txtPrecio" required="" class="form-control" placeholder="Ingrese el Precio" autofocus="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left left">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Incremento por Financiamiento:</label>
+                                                    <input id="txtIncrementoPlazo" type="text" maxlength="10" name="txtIncrementoPlazo" class="form-control" placeholder="Ingrese el Monto" autofocus="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Cuota Inicial:</label>
+                                                    <input id="txtCuotaInicial" type="text" maxlength="10" name="txtCuotaInicial" class="form-control" placeholder="Ingrese el Monto" autofocus="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Plazo (*):</label>
+                                                    <input id="txtPlazoMeses" type="text" maxlength="10" name="txtPlazoMeses" required="" class="form-control" placeholder="Ingrese el Plazo en Meses" autofocus="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <input id="txtCuotaMensualh" type="hidden" maxlength="10" class="form-control" name="txtCuotaMensualh" placeholder="" autofocus="" />
+                                                    <label>Cuota Mensual (*):</label>
+                                                    <input id="txtCuotaMensual" type="text" maxlength="10" name="txtCuotaMensual" required="" class="form-control" placeholder="Cuota a Pagar" autofocus="" disabled="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                                                <label>Cuota Mensual = (Precio + Incremento por Financiamiento - Cuota Inicial) / Plazo</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 left">
+                                        <div class="row">
+                                            <br>
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                <div class="form-group has-success">
+                                                    <label>Fecha de Pago (*) :</label>
+                                                    <input id="txtFechaPago" type="date" name="txtFechaPago" required="" class="form-control" autofocus="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left left">
+                                            <h5></h5>
+                                            <button class="btn btn-success" type="submit"><i class="fa fa-floppy-o"></i> Registrar</button>
+                                            <a href="Contrato.php" class="btn btn-primary" ><i class="fa fa-remove"></i> Cancelar</a>
+                                            <button class="btn btn-warning" id="btnLimpiar" type="button"><i class="fa fa-floppy-o"></i> Limpiar</button>
+                                            <hr>
+                                            <span class="lead text-primary"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="homeplandepagos" class="tab-pane fade">
+                            <form role="form" name="frmContrato3" id="frmContrato3" enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-lg-12 left">
+                                        <div class="row">
+                                            <br>
+
+                                            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+	                                            <span class="input-group-btn" >
+	                                                  <button type="button" class="btn btn-warning" id="btnVerPlandePagos"><i class='fa fa-search'></i>
+	                                                                Generar Reporte Plan de Pagos
+	                                                  </button>
+	                                            </span>
+	                                        </div>
+
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+								                <div id="VerListadoPlandePago" class="table-responsive">
+
+											        <table id="tblPlandePago" class="table table-striped table-bordered table-condensed table-hover" cellpadding="0" cellspacing="0" width="100%">
+									                    <thead>
+									                        <tr>
+								                                <th><center>Nro Cuota</center></th>
+								                                <th><center>Fecha Límite de Pago</center></th>
+								                                <th><center>Monto a Pagar (USD)</center></th>
+								                                <th><center>Total Pagado a la fecha (USD)</center></th>
+									                        </tr>
+									                    </thead>
+									                    <tfoot>
+									                        <tr>
+								                                <th><center>Nro Cuota</center></th>
+								                                <th><center>Fecha Límite de Pago</center></th>
+								                                <th><center>Monto a Pagar (USD)</center></th>
+								                                <th><center>Total Pagado a la fecha (USD)</center></th>
+									                        </tr>
+									                    </tfoot>
+									                    <tbody id="PlandePago">
+									                    </tbody>
+									                </table>
+
+								                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left left">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left left">
+                                            <a href="Contrato.php" class="btn btn-primary" ><i class="fa fa-remove"></i> Cancelar</a>
+                                            <hr>
+                                            <span class="lead text-primary"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="btnNuevo"><i class="fa fa-file"></i> Nuevo Contrato</button>
+                <br><br>
+                <div id="VerListado" class="table-responsive">
+                	<table id="tblContrato" class="table table-striped table-bordered table-condensed table-hover" cellpadding="0" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                            	<th>#</th>
+                                <th>Nro Contrato</th>
+                                <th>Cementerio</th>
+                                <th>Sector</th>
+                                <th>Nro Lote</th>
+                                <th>Adquiriente</th>
+                                <th>Ejecutivo de Venta</th>
+                                <th style="width:150px;">Opciones</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>#</th>
+                                <th>Nro Contrato</th>
+                                <th>Cementerio</th>
+                                <th>Sector</th>
+                                <th>Nro Lote</th>
+                                <th>Adquiriente</th>
+                                <th>Ejecutivo de Venta</th>
+                                <th style="width:150px;">Opciones</th>
+                            </tr>
+                        </tfoot>
+                        <tbody id="contrato">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div><!-- /.row -->
+    </div><!-- /.box-body -->
+</div><!-- /.box -->
+
+
+
+<div id="modalListadoAdquiriente" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Listado de Adquirientes</h4>
+      </div>
+      <div class="modal-body">
+      <div class="table-responsive">
+        <table id="tblAdquirientes" class="table table-striped table-bordered table-condensed table-hover" cellpadding="0" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Seleccione</th>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Tipo de Documento</th>
+                            <th>N° de Documento</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Seleccione</th>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Tipo de Documento</th>
+                            <th>N° de Documento</th>
+                        </tr>
+                    </tfoot>
+                    <tbody id="Adquiriente">
+                    </tbody>
+                </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-remove"></i> Cerrar</button>
+        <button type="button" id="btnAgregarAdquirienteCto" class="btn btn-primary"><i class="fa fa-plus"></i> Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="modalListadoEjecutivoVenta" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Listado de Ejecutivos de Ventas</h4>
+      </div>
+      <div class="modal-body">
+      <div class="table-responsive">
+        <table id="tblEjecutivosVentas" class="table table-striped table-bordered table-condensed table-hover" cellpadding="0" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Seleccione</th>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Tipo de Documento</th>
+                            <th>N° de Documento</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Seleccione</th>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Tipo de Documento</th>
+                            <th>N° de Documento</th>
+                        </tr>
+                    </tfoot>
+                    <tbody id="EjecutivoVenta">
+                    </tbody>
+                </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-remove"></i> Cerrar</button>
+        <button type="button" id="btnAgregarEjecutivoVentaCto" class="btn btn-primary"><i class="fa fa-plus"></i> Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+
+    $('#liContrato').addClass("treeview active");
+
+    $('#liContratos').addClass("active");
+
+</script>
+
