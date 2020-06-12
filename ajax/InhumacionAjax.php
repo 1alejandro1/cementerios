@@ -22,6 +22,7 @@
 			$idcontrato = $_POST["txtIdContrato"];
 
 			$iddifunto = $_POST["txtIdDifunto"];
+			$codigo = $_POST["txtCodigo"];
 
 			$fechafallecimiento = $_POST["txtFechaFallecimiento"];
 
@@ -33,7 +34,7 @@
 
 			if(empty($_POST["txtIdInhumacion"])){
 
-				if($objInhumacion->Registrar($idcontrato,$iddifunto,$fechafallecimiento,$fechainhumacion,$idpersonal,$observaciones)){
+				if($objInhumacion->Registrar($idcontrato,$codigo, $iddifunto,$fechafallecimiento,$fechainhumacion,$idpersonal,$observaciones)){
 
 					echo "Inhumación registrada correctamente";
 
@@ -47,7 +48,7 @@
 
 				$idinhumacion = $_POST["txtIdInhumacion"];
 
-				if($objInhumacion->Modificar($idinhumacion,$idcontrato,$iddifunto,$fechafallecimiento,$fechainhumacion,$idpersonal,$observaciones)){
+				if($objInhumacion->Modificar($idinhumacion, $codigo, $idcontrato,$iddifunto,$fechafallecimiento,$fechainhumacion,$idpersonal,$observaciones)){
 
 					echo "La informacion de la Inhumación ha sido actualizada";
 
@@ -113,7 +114,7 @@
 
                     "6"=>$reg->personal,
 
-                    "7"=>'<button class="btn btn-warning" data-toggle="tooltip" title="Editar" onclick="cargarDataInhumacion('.$reg->idinhumacion.','.$reg->idcontrato.','.$reg->iddifunto.',\''.$reg->fechafallecimiento.'\',\''.$reg->fechainhumacion.'\',\''.$reg->fecharegistro.'\','.$reg->idpersonal.',\''.$reg->observaciones.'\',\''.$reg->nrocontrato.'\',\''.$reg->fechacontrato.'\',\''.$reg->difunto.'\',\''.$reg->personal.'\',\''.$reg->cementerio.'\',\''.$reg->sector.'\',\''.$reg->lote.'\',\''.$reg->fila.'\',\''.$reg->columna.'\')"><i class="fa fa-pencil"></i> </button>&nbsp;'.
+                    "7"=>'<button class="btn btn-warning" data-toggle="tooltip" title="Editar" onclick="cargarDataInhumacion('.$reg->idinhumacion.','.$reg->codigo.','.$reg->idcontrato.','.$reg->iddifunto.',\''.$reg->fechafallecimiento.'\',\''.$reg->fechainhumacion.'\',\''.$reg->fecharegistro.'\','.$reg->idpersonal.',\''.$reg->observaciones.'\',\''.$reg->nrocontrato.'\',\''.$reg->fechacontrato.'\',\''.$reg->difunto.'\',\''.$reg->personal.'\',\''.$reg->cementerio.'\',\''.$reg->sector.'\',\''.$reg->lote.'\',\''.$reg->fila.'\',\''.$reg->columna.'\')"><i class="fa fa-pencil"></i> </button>&nbsp;'.
      				'<button class="btn btn-danger" data-toggle="tooltip" title="Eliminar" onclick="eliminarInhumacion('.$reg->idinhumacion.')"><i class="fa fa-trash"></i> </button>&nbsp;'.
      				'<button class="btn btn-primary" data-toggle="tooltip" title="Certificado de Óbito" onclick="certificadoObito('.$reg->idinhumacion . ',\'' . trim($reg->nrocontrato) .'\')"><i class="fa fa-print"></i> </button>');
 
@@ -189,7 +190,7 @@
 
 	            echo '<tr>
 
-		                <td><input type="radio" name="optDifuntoBusqueda" data-nombre="'.$regDifunto->nombre .'" id="dif'.$regDifunto->iddifunto.'" value="'.$regDifunto->iddifunto.'" /></td>
+		                <td><input type="radio" name="optDifuntoBusqueda" data-nombre="'.$regDifunto->nombre .'"    id="dif'.$regDifunto->iddifunto.'" value="'.$regDifunto->iddifunto.'" /></td>
 
 		                <td>'.$i.'</td>
 
