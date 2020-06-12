@@ -678,9 +678,12 @@ function cargarDataContrato(id, nrocontrato, idlote, idsector, idcementerio, obs
 
             $("#Adquiriente").html(r);
 
-            $('#tblAdquiriente').DataTable();
+            $('#tblAdquirientes').DataTable();
 
-        });
+		});
+		
+
+		
 
 	}
 
@@ -692,7 +695,7 @@ function cargarDataContrato(id, nrocontrato, idlote, idsector, idcementerio, obs
 
             $("#EjecutivoVenta").html(r);
 
-            $('#tblEjecutivoVenta').DataTable();
+            $('#tblEjecutivosVentas').DataTable();
 
         });
 
