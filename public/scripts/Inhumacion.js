@@ -125,7 +125,8 @@ function init(){
 
 	    $("#txtIdPersonal").val("");
 
-	    $("#txtObservaciones").val("");
+		$("#txtObservaciones").val("");
+		$("#txtCodigo").val("");
 
 	}
 
@@ -300,7 +301,7 @@ function certificadoObito(id,nrocontrato){
 }
 
 
-function cargarDataInhumacion(id, idcontrato,iddifunto,fechafallecimiento,fechainhumacion,fecharegistro,idpersonal,observaciones,nrocontrato,fechacontrato,difunto,personal,cementerio,sector,lote,fila,columna) {
+function cargarDataInhumacion(id, codigo, idcontrato,iddifunto,fechafallecimiento,fechainhumacion,fecharegistro,idpersonal,observaciones,nrocontrato,fechacontrato,difunto,personal,cementerio,sector,lote,fila,columna) {
 
 		$("#VerForm").show();// mostramos el formulario
 
@@ -310,6 +311,8 @@ function cargarDataInhumacion(id, idcontrato,iddifunto,fechafallecimiento,fechai
 
 
 		$("#txtIdInhumacion").val(id);
+
+		$("#txtCodigo").val(codigo);
 
 		$("#txtIdContrato").val(idcontrato);
 
