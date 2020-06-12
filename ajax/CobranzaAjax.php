@@ -158,7 +158,9 @@
 
 		                <td>'. $regContrato->nrocontrato .'</td>
 
-		                <td>'.$regContrato->adquiriente.'</td>
+						<td>'.$regContrato->adquiriente.'</td>
+						
+						<td>'.$regContrato->documento.'</td>
 
 		                <td>'.$regContrato->ejecutivoventa.'</td>
 

@@ -125,13 +125,7 @@
 
 			global $conexion;
 
-			$sql = "select c.*, CONCAT(a.nombre,' ',a.apellidos) as adquiriente, CONCAT(e.nombre,' ',e.apellidos) as ejecutivoventa, m.razonsocial, s.nombre as sector, l.numero as nrolote, l.fila as fila, l.columna as columna
-				from contrato c left join adquiriente a on c.idadquiriente = a.idadquiriente 
-					 left join ejecutivoventa e on c.idejecutivoventa = e.idejecutivoventa 
-					 left join cementerio m on c.idcementerio = m.idcementerio 
-					 left join sector s on c.idsector = s.idsector 
-					 left join lote l on c.idlote = l.idlote  
-				order by c.idcontrato desc";
+			$sql = "select c.*, CONCAT(a.nombre,' ',a.apellidos) as adquiriente, CONCAT(a.tipodocumento,' ',a.numdocumento) as documento, CONCAT(e.nombre,' ',e.apellidos) as ejecutivoventa, m.razonsocial, s.nombre as sector, l.numero as nrolote, l.fila as fila, l.columna as columna from contrato c left join adquiriente a on c.idadquiriente = a.idadquiriente left join ejecutivoventa e on c.idejecutivoventa = e.idejecutivoventa left join cementerio m on c.idcementerio = m.idcementerio left join sector s on c.idsector = s.idsector left join lote l on c.idlote = l.idlote order by c.idcontrato desc ";
 
 			$query = $conexion->query($sql);
 
